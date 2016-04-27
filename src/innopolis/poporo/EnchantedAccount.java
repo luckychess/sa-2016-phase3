@@ -11,8 +11,9 @@ public class EnchantedAccount extends Account {
 	@Override
 	public void closeAccount() {
 		System.out.println("Closing enchanted account...");
-		owner = null;
-		accountPage = null;
+		if (accountPage != null) {
+			accountPage.contentItems.clear();
+		}
 	}
 
 	@Override

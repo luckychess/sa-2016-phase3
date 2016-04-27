@@ -12,8 +12,9 @@ public class StandardAccount extends Account {
 	@Override
 	public void closeAccount() {
 		System.out.println("Closing standard account...");
-		owner = null;
-		accountPage = null;
+		if (accountPage != null) {
+			accountPage.contentItems.clear();
+		}
 	}
 
 	@Override
