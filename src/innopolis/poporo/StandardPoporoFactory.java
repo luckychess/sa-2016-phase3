@@ -23,7 +23,7 @@ public class StandardPoporoFactory extends PoporoFactory {
 	@Override
 	Page createPage() {
 		System.out.println("Creating standard Page...");
-		return new StandardPage();
+		return new StandardPage(createContentItem());
 	}
 
 }

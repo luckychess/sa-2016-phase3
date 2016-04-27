@@ -23,7 +23,7 @@ public class EnchantedPoporoFactory extends PoporoFactory {
 	@Override
 	Page createPage() {
 		System.out.println("Creating enchanted Page...");
-		return new EnchantedPage();
+		return new EnchantedPage(createContentItem());
 	}
 
 }
