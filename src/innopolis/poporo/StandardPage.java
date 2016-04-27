@@ -1,7 +1,10 @@
 package innopolis.poporo;
 
+import java.util.ArrayList;
+
 public class StandardPage extends Page {
 	public StandardPage(ContentItem c) {
+		contentItems = new ArrayList<ContentItem>();
 		contentItems.add(c);
 	}
 	
@@ -14,6 +17,11 @@ public class StandardPage extends Page {
 	
 	@Override
 	public boolean remove(ContentItem c) {
+		if (containsContentItem(c)) {
+			if (contentItems.size() == 1) {
+				return false;
+			}
+		}
 		return contentItems.remove(c);
 	}
 	
