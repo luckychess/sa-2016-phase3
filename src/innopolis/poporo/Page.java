@@ -10,4 +10,5 @@ public abstract class Page {
 	public abstract boolean remove(ContentItem c);
 	public abstract boolean isEmptyPage();
 	public abstract boolean containsContentItem(ContentItem c);
+	public abstract void Draw();
 }

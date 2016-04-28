@@ -34,4 +34,8 @@ public class EnchantedPage extends Page {
 	public boolean containsContentItem(ContentItem c) {
 		return contentItems.contains(c);
 	}
+	
+	@Override
+	public void Draw() {
+	}
 }

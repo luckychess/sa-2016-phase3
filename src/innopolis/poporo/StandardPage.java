@@ -7,14 +7,14 @@ public class StandardPage extends Page {
 		contentItems = new ArrayList<ContentItem>();
 		contentItems.add(c);
 	}
-	
+
 	@Override
 	public void upload(ContentItem c) {
 		if (!containsContentItem(c)) {
 			contentItems.add(c);
 		}
 	}
-	
+
 	@Override
 	public boolean remove(ContentItem c) {
 		if (containsContentItem(c)) {
@@ -24,14 +24,18 @@ public class StandardPage extends Page {
 		}
 		return contentItems.remove(c);
 	}
-	
+
 	@Override
 	public boolean isEmptyPage() {
 		return contentItems.isEmpty();
 	}
-	
+
 	@Override
 	public boolean containsContentItem(ContentItem c) {
 		return contentItems.contains(c);
+	}
+
+	@Override
+	public void Draw() {
 	}
 }
