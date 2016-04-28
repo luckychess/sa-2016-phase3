@@ -37,5 +37,6 @@ public class StandardPage extends Page {
 
 	@Override
 	public void Draw() {
+		System.out.println(" Draw in class StandardPage ");
 	}
 }

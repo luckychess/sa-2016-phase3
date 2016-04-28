@@ -6,6 +6,7 @@ public class WallDecorator extends Decorator {
 	}
 	
 	public void DrawWall() {
+		p.Draw();
 		System.out.println(" DrawWall in class WallDecorator ");
 	}
 	
@@ -23,6 +24,7 @@ public class WallDecorator extends Decorator {
 
 	@Override
 	public boolean remove(ContentItem c) {
+		c.removeAll();
 		return p.remove(c);
 	}
 
@@ -34,5 +36,25 @@ public class WallDecorator extends Decorator {
 	@Override
 	public boolean containsContentItem(ContentItem c) {
 		return p.containsContentItem(c);
+	}
+	
+	public void comment(ContentItem c1, ContentItem c2) {
+		if (p.containsContentItem(c1)) {
+			c1.add(c2);
+		}
+	}
+
+	public void uncomment(ContentItem c1, ContentItem c2) {
+		if (p.containsContentItem(c1)) {
+			c1.remove(c2);
+		}
+	}
+
+	public boolean has(ContentItem c1, ContentItem c2) {
+		return c1.contains(c2);
+	}
+
+	public boolean isDefinedAt(ContentItem c1) {
+		return !c1.isEmpty();
 	}
 }
